@@ -1,0 +1,22 @@
+.head
+{
+    background-color: #0A3D62;
+    text-align: float-left;
+    font-family: 'Courier New', Courier, monospace;
+    color: antiquewhite;
+}
+.home
+{
+    text-align: right;
+}
+
+.flat{
+
+    color: white;
+    text-align: right;
+    text-shadow: #542222;
+}
+
+.nav ul a{
+    background-color:#3385ff;
+}

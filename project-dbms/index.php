@@ -19,6 +19,8 @@
 <body>
 <?php 
     include('navbar.php');
+    require('login.php');
+    
 ?>            
 <!--Header image -->
 <div class="hero-image">
@@ -36,7 +38,7 @@
 <div class="row container-fluid">
     <div class="col-6"> 
         <div class="form-group  col-lg-9  shadow">
-            <form method='post' action="dashboard.php" class="form md-6">
+            <form method='post' action="index.php" class="form md-6">
             <div class="heading text-center mb-5 text-white">
                Login
             </div>
@@ -48,7 +50,8 @@
                    <i class="fa fa-key" aria-hidden="true"></i> 
                         <strong><label for="pass">Password</label></strong>
                     <input type="password" class="form-control" name="pass"><br><br>
-                    <input type="submit" class="btn btn-success" value="Login" name="submit"><br><br>
+                    <input type="submit" class="btn btn-success" value="Login" name="login"><br><br>
+                   <strong> <a href="register.php" style="float:right;" class='text-danger'>Sign Up</a></strong>
                 </div>
             </div>
         </form>
@@ -62,10 +65,12 @@
                 <footer class="blockquote-footer"> <cite title="Source Title">Fitness Queto</cite></footer>
             </blockquote>
         </section>
+        
 </div>
 
 <?php 
     include('footer.php');
+    
 ?> 
 
 

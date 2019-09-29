@@ -23,38 +23,38 @@
 
     ?>
 <h2 class="bg-dark text-white text-center">
-        <a href="admin_login.php"> <button class="btn btn-outline-light float-left">  Back</button></a>
-         Admin Dashboard  <?php echo "[ ". $_SESSION['name']." ]" ?>
+        <a href="index.php"> <button class="btn btn-outline-light float-left">  Back</button></a>
+        User Dashboard
         <a href="logout.php"> <button class="btn btn-outline-light float-right">  Logout</button></a>
      </h2>
       
      <br><br>
       
         <div class="row">
-          <div class="col-9 container">
-            <div class="list-group text-center">
-              <a href="member.php" class="list-group-item active bg-success">Member details</a>
-              <a href="register.php" class="list-group-item  ">Add Members</a>
-              <a href="remove_mem.php" class="list-group-item ">Remove Member</a>
-              <a href="update_mem.php" class="list-group-item ">Update details</a>
-              <a href="package.php" class="list-group-item">Add Package</a>
-              <a href="payment.php" class="list-group-item">Payments</a>
-            </div>
-          </div>
-          
-        </div>
+           <div class="col-3" >
+                      <div class="list-group text-center">
+                        <a href="trainer.php" class="list-group-item active bg-success">Trainer</a>
+                        <a href="product.php" class="list-group-item ">Product</a>
+                        <a href="package.php" class="list-group-item">Package details</a>
+                        <a href="payment.php" class="list-group-item">Payments</a>
+                      </div>
+           </div>
+           
+               <h1 class="jumbotron text-center bg-info text-white" style="height:500%; width:50%">
+                  Welcome <?php echo strtoupper($_SESSION['name']) ?>
+               </h1>
+   
         <br><br>
-        <div class="row">
-          <div class="col-9 container">
-            <div class="list-group text-center">
-                <a href="trainer.php" class="list-group-item bg-dark text-white">Trainer Details</a>
-                <a href="trainer_add.php" class="list-group-item bg-dark text-white">Add Trainer</a>             
-                <a href="remove_t.php" class="list-group-item bg-dark text-white">Remove Trainer</a>      
-                <a href="update_trainer.php" class="list-group-item bg-dark text-white">Update Trainer</a>      
-
-            </div>
-          </div>   
-        </div>
+        
+       <div class="col-3">
+                <div class="list-group text-center">
+                   <a href="gallary.php" class="list-group-item active bg-success">Gallery</a>
+                   <a href="tips.php" class="list-group-item ">Tips </a>
+                   <a href="rule.php" class="list-group-item">Rules & Guidlines</a>
+                   
+                </div>
+      </div>
+   </div>
 
 
 </body>

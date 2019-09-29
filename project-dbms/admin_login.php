@@ -18,6 +18,7 @@
 <?php 
     include('navbar.php');
 ?>
+<form method = "post" action = "admin_login.php">
     <div class="container center-div shadow">
         <div class="heading text-center mb-5 text-white">
             Admin Login
@@ -25,15 +26,46 @@
         <div class=" container row d-flex flex-row justify-content-center mb-5 ">
             <div class="form-group container shadow p2">
                <strong> <label for="user">UserName</label></strong>
-                <input type="text" class="form-control"><br>
+                <input type="text" class="form-control" name="name"><br>
                 <strong><label for="pass">Password</label></strong>
-                <input type="password" class="form-control"><br><br>
-                <input type="submit" class="btn btn-success " value="Login"><br><br>
+                <input type="password" class="form-control" name="pass"><br><br>
+                <input type="submit" class="btn btn-success " name ="submit" value="Login"><br><br>
             </div>
         </div>
     </div>   
 <div>
 
 </div>
+</form>
+<?php 
+    include('db.php');
+
+    if(isset($_POST['submit']))
+    {
+        $a_name = $_POST['name'];
+        $a_pass = $_POST['pass'];
+
+        $qry = "SELECT * FROM `admin` WHERE `name` = '$a_name' AND `password` ='$a_pass'";
+                
+        $run = mysqli_query($db,$qry);
+        $row = mysqli_num_rows($run);
+
+        if($row < 1)
+        {
+            ?>
+            <script>
+                window.alert('Invalid Credintial (;');
+            </script>
+            <?php
+        }
+        else
+        {
+            $data = mysqli_fetch_assoc($run);
+            session_start();
+            $_SESSION['name'] = $data['name'];
+            header('location:admin.php');
+        }
+    }
+?>
 </body>
 </html>

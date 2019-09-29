@@ -23,35 +23,33 @@
     <div class="container-fluid">
       <div class="row">
         <div class="form-group container col-sm-6 ml-auto jumbotron">
-            <form method='post' action="index.html" class="form md-6">
+            <form method='post' action="check_login.php" enctype="multipart/form-data" class="form md-6">
                     <label for="fname">First Name</label>
-                      <input type="text" class="form-control" id="fname"><br>
-                      <label for="pass" >Last Name</label>
-                      <input type="password" class="form-control" id="lname"><br>
+                      <input type="text" class="form-control" name= 'fname' id="fname" required><br>
+                      <label for="pass" >Password</label>
+                      <input type="password" class="form-control" name="pass" required><br>
                       <label for="email">Email</label>
-                      <input type="email" name="email" class="form-control"><br>
+                      <input type="email" name="email" class="form-control" required><br>
                       <label for="mobile">Mobile No</label>
-                      <input type="text" name="mobile" class="form-control"><br>
+                      <input type="text" name="mobile" class="form-control" required><br>
                       <label for="age">Age</label>
-                      <input type="text" name="age" class="form-control"><br>
+                      <input type="text" name="age" class="form-control" required><br>
                       <label for="dob">DOB</label>
-                      <input type="date" name="dob" class="form-control"><br>
+                      <input type="date" name="dob" class="form-control" required><br>
                       <label for="zip">Pin Code</label>
-                      <input type="text" name="zip" class="form-control"><br>
-                      <label for="photo">Image</label><br>
-                      <input type="file" name="photo" id="photo"><br><br>
+                      <input type="text" name="zip" class="form-control" required><br>
+                      <label for="img">Image</label><br>
+                      <input type="file" name="img" id="img" required><br><br>
                       <label for="address">Address</label><br>
-                      <textarea row ="4" cols="50" ></textarea><br><br>
-                      <input type="button" name="submit" id="btn" value="Join Now" class="btn btn-primary">
+                      <textarea row ="4" cols="50" class='addr' name='addr' required></textarea><br><br>
+                      <input type="submit" name="submit" id="btn" value="Join Now" class="btn btn-primary">
                       <p class="text-right"><a href="index.html">Login Here</a></p>
                   </form>
          </div>
     </div>
 <?php 
     include('footer.php');
-?> 
-<?php
-
+    require('check_login.php');
 ?>
 </body>
 </html>
